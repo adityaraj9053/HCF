@@ -1,0 +1,20 @@
+ //3RD METHOD THROUGH THIS WE CAN FIND HCF OF ANY NUMBER WITHOUT 
+//        BOTHERING THAT 1ST NUMBER IS LARGEST OR NOT.
+import java.util.Scanner;
+
+public class Hcf {
+    public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter 2 number");
+int a = sc.nextInt();        
+int b = sc.nextInt();
+int s = Math.max(a, b); // dividend.
+int t = Math.min(a, b); // divisor.
+while(t !=0){
+    int rem = s%t;
+          s = t;
+          t = rem;
+}
+System.out.println("HCF: "+s);
+    }
+}
