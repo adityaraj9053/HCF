@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Hcf {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter dividend:");
+        int a = sc.nextInt();
+        System.out.println("Enter divisor:");        
+        int b = sc.nextInt();
+        
+        while(b != 0){ // during HCF calculation  divisor can't be 0.            
+          
+           // if (a>b) {  //a = dividend, b = divisor.
+            int rem = a%b;
+                
+               a = b;  // during hcf calculation remainder become divisor &
+        //divisor become dividend. so, value of "b" (divisor) will  store
+        // on variable "a" which is assigned for dividend.
+                
+               b = rem;  //Similarly, value of "rem" (remainder) will  store
+         // on variable "b" which is assigned for divisor.
+
+
+/*ELSE STATEMENT WRONG BCOZ CONDITION FOR WHILE IS (b != 0). BUT WHEN
+b = dividend THEN b will never 0. SO, LOOP RUNS FOR INFINITE TIME 
+
+SO REMOVE IF-ELSE STATEMENT*/
+        //   } else{  
+        //    int rem = b%a;  //b = dividend, a = divisor.
+        //          b = a;
+        //          a = rem;
+        //   }
+        }System.out.println("HCF: "+a);// let a = 12 & b=16.loop will stop
+    //when a = 4, b = 12 and rem = 0 then, 
+    }
+}
