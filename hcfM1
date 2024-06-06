@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Hcf {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 2 number");
+        int a = sc.nextInt();        
+        int b = sc.nextInt();
+        int smallest,greatest;
+        if(a>b){
+             smallest = b;
+             greatest = a;
+        } else{
+             smallest = a;
+             greatest = b;
+        }        
+        //for(int i = smallest; i>1; i--){
+        //for(int i = 1; i<=smallest; i++){
+            int i =1;
+            int HCF = 1;
+            while(i <= smallest){
+           if(greatest % i ==0 && smallest % i==0){
+             HCF= i;
+            } //else{
+             //continue;  
+            //}
+// continue statement causes the loop to skip the increment i++ whenever 
+//condition is false. This leads to an infinite loop.
+            i++;
+        }
+        System.out.println(("HCF=" +HCF));
+    }
+}
