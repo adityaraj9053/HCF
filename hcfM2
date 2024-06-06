@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Hcf{
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter numbers: ");
+        int a = sc.nextInt(); 
+        int b = sc.nextInt();
+                   /*  while(a != 0){
+                    if(a==b){
+                        System.out.println("HCF: " +a);
+                    } else{ */
+        while(a != b){ // if there is no loop then we will not get any output
+    //bcoz if staement will run only single time. if loop = (a!=0) then loop 
+    //run for infinite time.  
+            if(a>b){
+                a = a-b; //value of "a" is modified.
+            }else{
+                b = b-a; // value of "b" is modified.
+                        }
+                    }
+                System.out.println("HCF: " +a); // above loop will stop when 
+            //a = b and  the value of HCF = a = b. so,here a is the modified
+            //value not the original one.
+                }
+            }
